@@ -120,4 +120,6 @@ public abstract class InventoryAdaptor implements Iterable<ItemSlot>
 	public abstract ItemStack simulateAdd( ItemStack toBeSimulated );
 
 	public abstract boolean containsItems();
+
+	public abstract boolean containsItemsForFace();
 }

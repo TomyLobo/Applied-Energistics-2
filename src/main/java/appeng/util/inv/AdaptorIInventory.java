@@ -246,6 +246,23 @@ public class AdaptorIInventory extends InventoryAdaptor
 		return false;
 	}
 
+	@Override
+	public boolean containsItemsForFace()
+	{
+		if( this.wrapperEnabled )
+		{
+			for( int x : ((IInventoryWrapper) this.i).getSlotsForFace() )
+			{
+				if( this.i.getStackInSlot( x ) != null )
+				{
+					return true;
+				}
+			}
+			return false;
+		}
+		return containsItems();
+	}
+
 	/**
 	 * Adds an {@link ItemStack} to the adapted {@link IInventory}.
 	 *

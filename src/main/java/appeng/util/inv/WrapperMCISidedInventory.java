@@ -74,4 +74,10 @@ public class WrapperMCISidedInventory extends WrapperInventoryRange implements I
 
 		return this.side.canExtractItem( this.getSlots()[i], is, this.dir );
 	}
+
+	@Override
+	public int[] getSlotsForFace()
+	{
+		return this.side.getSlotsForFace(this.dir);
+	}
 }

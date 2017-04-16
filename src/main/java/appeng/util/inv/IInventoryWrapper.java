@@ -26,4 +26,6 @@ public interface IInventoryWrapper
 {
 
 	boolean canRemoveItemFromSlot( int x, ItemStack is );
+
+	int[] getSlotsForFace();
 }
